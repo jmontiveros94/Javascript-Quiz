@@ -24,6 +24,6 @@ This is a simple quiz application designed to test a user's knowledge of Javascr
 
 5. To restart the quiz, click the "Restart Quiz" button.
 
-## Screenshots 
+## Screenshot
 
-
+![A user runs through an interactive quiz about Javascript](./Assets/Screenshot%202023-08-08%20at%205.12.09%20PM.png)
