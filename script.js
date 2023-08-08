@@ -81,14 +81,14 @@ function wrongAnswer() {
 
 }
 
-const highScoresList = document.getElementById('high-scores-list');
+var highScoresList = document.getElementById('high-scores-list');
 // Array to store high scores
-const scores = []; 
+var scores = []; 
 // Creates a list of high scores using the forEach method and appends them to a list using the appendChild method
 function displayHighScores() {
   highScoresList.innerHTML = '';
   scores.forEach((score, index) => {
-    const listItem = document.createElement('li');
+    var listItem = document.createElement('li');
     listItem.textContent = `${index + 1}. ${score}`;
     highScoresList.appendChild(listItem);
   });
@@ -108,7 +108,7 @@ function quizCompleted(score) {
   updateHighScores(score);
 }
 
-const restartButton = document.getElementById('restart-button');
+var restartButton = document.getElementById('restart-button');
 restartButton.addEventListener('click', restartQuiz);
 
 function restartQuiz() {
@@ -122,7 +122,7 @@ function restartQuiz() {
 
 // Example quiz completion logic
 function quizCompleted() {
-  const userScore = calculateUserScore(); // Calculate user's score based on their answers
+  var userScore = calculateUserScore(); // Calculate user's score based on their answers
   quizCompleted(userScore); // Add the user's score to high scores
   // Shows the "Restart Quiz" button
   restartButton.style.display = 'block';
