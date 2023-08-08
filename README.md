@@ -28,9 +28,9 @@ This is a simple quiz application designed to test a user's knowledge of Javascr
 
 ![A user runs through an interactive quiz about Javascript](./Assets/Screenshot%202023-08-08%20at%205.12.09%20PM.png)
 
-## License
+## Licenses
 
-MIT License
+MIT Licenses
 
 Copyright (c) 2023 jmontiveros94
 
