@@ -52,7 +52,7 @@ function checkAnswer(optionIndex) {
 }
 // Timer 
 var timeElement = document.getElementById('time');
-let timeLeft = 60;
+let timeLeft = 30;
 
 function updateTimer() {
   timeElement.textContent = timeLeft + ' seconds';
@@ -82,9 +82,9 @@ function wrongAnswer() {
 }
 
 const highScoresList = document.getElementById('high-scores-list');
-
-const scores = []; // Array to store high scores
-
+// Array to store high scores
+const scores = []; 
+// Creates a list of high scores using the forEach method and appends them to a list using the appendChild method
 function displayHighScores() {
   highScoresList.innerHTML = '';
   scores.forEach((score, index) => {
@@ -103,10 +103,31 @@ function updateHighScores(newScore) {
   displayHighScores();
 }
 
-// Call this function whenever a user completes the quiz and their score needs to be added
+// Calls this function whenever a user completes the quiz and their score needs to be added
 function quizCompleted(score) {
   updateHighScores(score);
 }
+
+const restartButton = document.getElementById('restart-button');
+restartButton.addEventListener('click', restartQuiz);
+
+function restartQuiz() {
+  // Reset necessary variables and state
+  timeLeft = 30; // Reset the timer
+  scores.length = 0; // Clear high scores
+  updateTimer(); // Update timer display
+  displayHighScores(); // Update high scores display
+  startQuiz(); // Start the quiz again
+}
+
+// Example quiz completion logic
+function quizCompleted() {
+  const userScore = calculateUserScore(); // Calculate user's score based on their answers
+  quizCompleted(userScore); // Add the user's score to high scores
+  // Shows the "Restart Quiz" button
+  restartButton.style.display = 'block';
+}
+
 
 startQuiz();
 
